@@ -42,7 +42,7 @@ body {
 }
 .slider-container {
    max-width: 1200px;
-   width: 80%;
+   width: 90%;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -52,8 +52,8 @@ body {
 
 .slider img {
    border-radius: 10px;
-   width: 30vw;
-   height: 20.015vw;
+   width: 40vw;
+   height: 26.87vw;
 }
 
 /*dots*/

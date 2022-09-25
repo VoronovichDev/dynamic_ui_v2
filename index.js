@@ -23,7 +23,7 @@ function setDefaultSlide() {
    offset = 0
 }
 
-window.addEventListener('load', () => {
+window.addEventListener('resize', () => {
    removeActiveFromDots()
    setDefaultDot()
    setDefaultSlide()
@@ -51,8 +51,8 @@ function swapTo(side) {
 
    const active_dot = document.querySelector('.dot-active')
    if (width_swap > (slide_width * images.length) / 2 && -offset !== width_swap) {
-      sliderRow.style.left = -((slide_width * images.length) / 2) + ((images.length - 1) * row_gap)
-      offset = -((slide_width * images.length) / 2) + ((images.length - 1) * row_gap)
+      sliderRow.style.left = 0
+      offset = -((slide_width * (images.length - 1)) / 2) - ((images.length - 3) * row_gap)
       removeActiveFromDots()
       dots_arr[0].classList.add('dot-active')
    } else if (width_swap > (slide_width * images.length) / 2 && offset !== width_swap) {
@@ -75,7 +75,6 @@ function swapTo(side) {
    const nextDot = dots_arr[nextDot_index]
    if (nextDot) nextDot.classList.add('dot-active')
 }
-
 
 
 
