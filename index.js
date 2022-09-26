@@ -118,3 +118,7 @@ function navigateByDot(width, direction) {
 
    sliderRow.style.left = -offset + 'px'
 }
+
+setInterval(() => {
+   swapTo('right')
+}, 5000);
